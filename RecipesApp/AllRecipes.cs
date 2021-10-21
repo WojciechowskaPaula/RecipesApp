@@ -39,16 +39,52 @@ namespace RecipesApp
         {
             Console.WriteLine("Enter recipe ID you want to remove:");
             string response = Console.ReadLine();
+            Recipe recipeToRemove =null;
             int.TryParse(response, out int responseInt);
             foreach (var item in Recipes)
             {
                 if(responseInt == item.Id)
                 {
-                    Recipes.Remove(item);
+                     recipeToRemove = item;
                 }
             }
-            Console.WriteLine($"Recipe ID: {responseInt} succesfully removed");
+            if(recipeToRemove != null)
+            {
+                Recipes.Remove(recipeToRemove);
+                Console.WriteLine($"Recipe ID: {responseInt} succesfully removed");
+            }
+            else
+            {
+                Console.WriteLine("ID Not Found");
+            }
+            
+            
             return responseInt;
+        }
+        
+        public void DisplayRecipeDetails()
+        {
+            Console.WriteLine("Enter recipe ID you want to display:");
+            string recipeId = Console.ReadLine();
+            int.TryParse(recipeId, out int recipeIdInt);
+            Recipe recipeToDisplay = null;
+            foreach (var item in Recipes)
+            {
+                if(item.Id == recipeIdInt)
+                {
+                    recipeToDisplay = item;
+                    break;
+                }
+            }
+            if(recipeToDisplay != null)
+            {
+                Console.WriteLine($"Recipe details:\n ID:{recipeToDisplay.Id}\n Name:{recipeToDisplay.Name}\n " +
+                $"Description:{recipeToDisplay.Description}");
+            }
+            else
+            {
+                Console.WriteLine("ID Not Found");
+            }
             
         }
 
