@@ -1,0 +1,16 @@
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.exe
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.deps.json
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.runtimeconfig.json
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.runtimeconfig.dev.json
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.dll
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\ref\RecipesApp.dll
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\bin\Debug\net5.0\RecipesApp.pdb
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.csprojAssemblyReference.cache
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.AssemblyInfoInputs.cache
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.AssemblyInfo.cs
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.csproj.CoreCompileInputs.cache
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.dll
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\ref\RecipesApp.dll
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.pdb
+C:\Users\paull\source\repos\RecipesApp\RecipesApp\obj\Debug\net5.0\RecipesApp.genruntimeconfig.cache
