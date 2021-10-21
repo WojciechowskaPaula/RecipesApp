@@ -35,6 +35,9 @@ namespace RecipesApp
             {
                 if (!char.IsDigit(answer[i]))
                 {
+                    Console.WriteLine("Please choose one of the available options.");
+                    Console.WriteLine("Press any key to try again..");
+                    Console.ReadKey();
                     return -1;
                 }
                 else
@@ -64,6 +67,7 @@ namespace RecipesApp
                     break;
                 default:
                     Console.WriteLine("Your action does not exist");
+                    Console.Clear();
                     break;
             }
             

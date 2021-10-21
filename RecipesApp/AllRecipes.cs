@@ -22,7 +22,6 @@ namespace RecipesApp
         public Recipe AddRecipeInfo()
         {
             Recipe recipe = new Recipe();
-           
             Console.WriteLine("Enter recipe ID:");
             string id = Console.ReadLine();
             int.TryParse(id, out int idInt);
@@ -31,7 +30,7 @@ namespace RecipesApp
             {
                 if (Recipes[i].Id == idInt)
                 {
-                    Console.WriteLine("The selected ID currently exists");
+                    Console.WriteLine("The selected ID currently exists.");
                     return null;
                 }
             }
@@ -42,6 +41,7 @@ namespace RecipesApp
             recipe.Id = idInt;
             recipe.Name = name;
             recipe.Description = description;
+            Console.Clear();
             return recipe;
         }
 
@@ -61,14 +61,15 @@ namespace RecipesApp
             if (recipeToRemove != null)
             {
                 Recipes.Remove(recipeToRemove);
-                Console.WriteLine($"Recipe ID: {responseInt} succesfully removed");
+                Console.WriteLine($"Recipe ID: {responseInt} succesfully removed.");
             }
             else
             {
                 Console.WriteLine("ID Not Found");
             }
-
-
+            Console.WriteLine("Press any key to try again..");
+            Console.ReadKey();
+            Console.Clear();
             return responseInt;
         }
 
@@ -88,17 +89,16 @@ namespace RecipesApp
             }
             if (recipeToDisplay != null)
             {
-                Console.WriteLine($"Recipe details:\n ID:{recipeToDisplay.Id}\n Name:{recipeToDisplay.Name}\n " +
-                $"Description:{recipeToDisplay.Description}");
+                Console.WriteLine($"Recipe details:\n ID: {recipeToDisplay.Id}\n Name: {recipeToDisplay.Name}\n " +
+                $"Description: {recipeToDisplay.Description}");
             }
             else
             {
                 Console.WriteLine("ID Not Found");
             }
-
+            Console.WriteLine("Press any key to try again.."); 
+            Console.ReadKey();
+            Console.Clear();
         }
-
     }
-
-
 }
