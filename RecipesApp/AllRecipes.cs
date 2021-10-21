@@ -22,10 +22,18 @@ namespace RecipesApp
         public Recipe AddRecipeInfo()
         {
             Recipe recipe = new Recipe();
-            Console.WriteLine("Enter recipe ID:");
-            string id = Console.ReadLine();
-            int.TryParse(id, out int idInt);
-
+            bool isANumber = false;
+            int idInt = 0;
+            while (isANumber == false)
+            {
+                Console.WriteLine("Enter recipe ID:");
+                string id = Console.ReadLine();
+                isANumber = int.TryParse(id, out idInt);
+                if (isANumber == false)
+                {
+                    Console.WriteLine("The specified character is not a number. Please try again.");
+                }
+            }
             for (int i = 0; i < Recipes.Count; i++)
             {
                 if (Recipes[i].Id == idInt)
