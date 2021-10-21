@@ -21,14 +21,24 @@ namespace RecipesApp
 
         public Recipe AddRecipeInfo()
         {
+            Recipe recipe = new Recipe();
+           
             Console.WriteLine("Enter recipe ID:");
-            var id = Console.ReadLine();
+            string id = Console.ReadLine();
             int.TryParse(id, out int idInt);
+
+            for (int i = 0; i < Recipes.Count; i++)
+            {
+                if (Recipes[i].Id == idInt)
+                {
+                    Console.WriteLine("The selected ID currently exists");
+                    return null;
+                }
+            }
             Console.WriteLine("Enter recipe Name:");
             var name = Console.ReadLine();
             Console.WriteLine("Enter recipe Description:");
             var description = Console.ReadLine();
-            Recipe recipe = new Recipe();
             recipe.Id = idInt;
             recipe.Name = name;
             recipe.Description = description;
@@ -39,16 +49,16 @@ namespace RecipesApp
         {
             Console.WriteLine("Enter recipe ID you want to remove:");
             string response = Console.ReadLine();
-            Recipe recipeToRemove =null;
+            Recipe recipeToRemove = null;
             int.TryParse(response, out int responseInt);
             foreach (var item in Recipes)
             {
-                if(responseInt == item.Id)
+                if (responseInt == item.Id)
                 {
-                     recipeToRemove = item;
+                    recipeToRemove = item;
                 }
             }
-            if(recipeToRemove != null)
+            if (recipeToRemove != null)
             {
                 Recipes.Remove(recipeToRemove);
                 Console.WriteLine($"Recipe ID: {responseInt} succesfully removed");
@@ -57,11 +67,11 @@ namespace RecipesApp
             {
                 Console.WriteLine("ID Not Found");
             }
-            
-            
+
+
             return responseInt;
         }
-        
+
         public void DisplayRecipeDetails()
         {
             Console.WriteLine("Enter recipe ID you want to display:");
@@ -70,13 +80,13 @@ namespace RecipesApp
             Recipe recipeToDisplay = null;
             foreach (var item in Recipes)
             {
-                if(item.Id == recipeIdInt)
+                if (item.Id == recipeIdInt)
                 {
                     recipeToDisplay = item;
                     break;
                 }
             }
-            if(recipeToDisplay != null)
+            if (recipeToDisplay != null)
             {
                 Console.WriteLine($"Recipe details:\n ID:{recipeToDisplay.Id}\n Name:{recipeToDisplay.Name}\n " +
                 $"Description:{recipeToDisplay.Description}");
@@ -85,7 +95,7 @@ namespace RecipesApp
             {
                 Console.WriteLine("ID Not Found");
             }
-            
+
         }
 
     }

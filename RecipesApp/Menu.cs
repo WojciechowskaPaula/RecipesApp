@@ -15,7 +15,8 @@ namespace RecipesApp
 
         public Menu()
         {
-            menuOptions = new List<string>() { "1. Add new recipe", "2. Remove recipe", "3. Display recipe details", "0. Exit" };
+            menuOptions = new List<string>() { "1. Add new recipe", "2. Remove recipe", "3. Display recipe details", 
+                "0. Exit" };
             allRecipes = new AllRecipes();
         }
         public void DisplayMenu()
@@ -28,7 +29,19 @@ namespace RecipesApp
         public int SaveMenuOption()
         {
             string answer = Console.ReadLine();
-            int.TryParse(answer, out int intAnswer);
+            int intAnswer = 0;
+            
+            for (int i = 0; i < answer.Length; i++)
+            {
+                if (!char.IsDigit(answer[i]))
+                {
+                    return -1;
+                }
+                else
+                {
+                    int.TryParse(answer, out intAnswer);
+                }
+            }
             return intAnswer;
         }
 
