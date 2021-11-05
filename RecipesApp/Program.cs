@@ -19,8 +19,6 @@ namespace RecipesApp
                 Console.Clear();
                 menu.Execute(userAnswer);
             }
-            
         }
-        
     }
 }
